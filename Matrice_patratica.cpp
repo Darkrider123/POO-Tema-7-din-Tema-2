@@ -53,7 +53,7 @@ istream &operator >> (istream &in, Matrice_patratica &ob)
 
 }
 
-ostream &operator << (ostream &out, Matrice_patratica &ob)
+ostream &operator << (ostream &out, const Matrice_patratica &ob)
 {
      int i,j;
     for (i=0;i<ob.dim;i++)
@@ -73,7 +73,7 @@ ostream &operator << (ostream &out, Matrice_patratica &ob)
 }
 
 
-NRcomplex Matrice_patratica::Determinant()
+NRcomplex Matrice_patratica::Determinant() const
 {
      int x,i,j,subi=0,subj=0;
     NRcomplex det;
@@ -163,6 +163,8 @@ Matrice_patratica::Matrice_patratica(const Matrice_patratica &ob)
 
 Matrice_patratica Matrice_patratica::operator =(const Matrice_patratica &ob)
 {
+    if (this==&ob) return *this;
+
     int i,j;
 
     if (dim>0)
