@@ -13,6 +13,8 @@ public:
     Matrice_oarecare(int n, int m);
     ~Matrice_oarecare();
 
+
+
     ///SUPLIMENTAR
     Matrice_oarecare operator =(const Matrice_oarecare &ob);
     Matrice_oarecare (const Matrice_oarecare &ob);
@@ -20,7 +22,7 @@ public:
     ///SUPLIMENTAR
 
     friend istream &operator >> (istream &in, Matrice_oarecare &ob);
-    friend ostream &operator << (ostream &out, Matrice_oarecare &ob);
+    friend ostream &operator << (ostream &out,const Matrice_oarecare &ob);
 };
 
 
