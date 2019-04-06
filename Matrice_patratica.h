@@ -3,7 +3,7 @@
 #include "Matrice.h"
 
 
-class Matrice_patratica:private Matrice
+class Matrice_patratica:public Matrice
 {
     int dim;
 
@@ -11,8 +11,10 @@ public:
     Matrice_patratica();
     Matrice_patratica(int n);
     ~Matrice_patratica();
-    NRcomplex Determinant();
+    NRcomplex Determinant()const ;
     void VerificareTriunghiularitate();
+
+
 
     ///SUPLIMENTAR
     Matrice_patratica(const Matrice_patratica &ob);
@@ -25,7 +27,7 @@ public:
     ///SUPLIMENTAR
 
     friend istream &operator >> (istream &in, Matrice_patratica &ob);
-    friend ostream &operator << (ostream &out, Matrice_patratica &ob);
+    friend ostream &operator << (ostream &out, const Matrice_patratica &ob);
 
 };
 
