@@ -66,7 +66,7 @@ istream &operator >> (istream &in, Matrice_oarecare &ob)
 
 }
 
-ostream &operator << (ostream &out, Matrice_oarecare &ob)
+ostream &operator << (ostream &out,const Matrice_oarecare &ob)
 {
     int i,j;
     for (i=0;i<ob.lin;i++)
