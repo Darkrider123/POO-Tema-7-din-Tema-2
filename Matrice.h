@@ -3,7 +3,7 @@
 #include "Complex.h"
 using namespace std;
 
-class Matrice:protected NRcomplex
+class Matrice
 {
 protected:
 
@@ -13,9 +13,8 @@ public:
 
     Matrice();
     Matrice(int n, int m);
-    ~Matrice();
+   virtual ~Matrice()=0;
 
 };
-
 
 #endif
